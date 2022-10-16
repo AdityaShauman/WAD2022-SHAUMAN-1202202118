@@ -1,0 +1,66 @@
+*, html, body {
+    margin: 0;
+    padding : 0;
+}
+
+.fContainer {
+    display: flex;
+    /* width: 100; */
+    transition : all .3s ease-in-out;
+    /* height: 100vh; */
+}
+
+.wrapper {
+    display: flex;
+    font-size : 10px;
+    width: 100%;
+    height : 100%;
+    background-color: lightgray;
+}
+
+.navigation {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.navigation > li {
+    list-style-type: none;
+    padding: 15px;
+}
+
+.navigation > li > a {
+    color: black;
+    font-size: 15px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.navigation>li>a:hover {
+    color:white;
+    transition : all .3s ease-in-out;
+}
+
+.navigation>li>img {
+    width: 140px;
+    height: 40px;
+}
+
+.tentang{
+    background-color: lightblue;
+}
+
+iframe {
+    margin: 0 auto;
+    display:block;
+}
+
+.cardcomp{
+    background-color:cyan;
+}
+
+.footer {
+    text-decoration: none;
+    color: black;
+    
+}
