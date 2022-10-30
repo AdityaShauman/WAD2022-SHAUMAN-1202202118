@@ -1,0 +1,59 @@
+body, *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.menu ul{
+    list-style: none;
+    background: rgb(61, 48, 61);
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.menu li{
+    display: inline-block;
+}
+
+.menu a{
+    text-decoration: none;
+    color: rgb(214, 160, 160);
+    width: 100px;
+    display: block;
+    padding:25px 20px;
+    text-align: center;
+}
+
+.menu a:hover{
+    color:yellow;
+}
+
+.footer {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    
+}
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.row:after {
+    display: table;
+    clear: both;
+  }
+
+.card>ul>li{
+    color: blue;
+    text-align: center;
+    font-weight: 500;
+}
