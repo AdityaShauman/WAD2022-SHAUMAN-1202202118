@@ -22,7 +22,7 @@
 
         <br>
         <?php
-            $nama = isset($_GET['name']) ? $_GET['name'] : '';
+            $name = isset($_GET['name']) ? $_GET['name'] : '';
             $date = isset($_GET['date']) ? $_GET['date'] : '';
             $duration = isset($_GET['duration']) ? $_GET['duration'] : '';
             $number = isset($_GET['number']) ? $_GET['number'] : '';

@@ -30,7 +30,7 @@
             </div>
 
             <div class="col-sm">
-            <form action="Shauman_booking.php" method ="GET">
+            <form action="Shauman_mybooking.php" method ="GET">
                 <div class="mb-3">
                     <label for="name" class="form-label">Name</label>
                     <input type="text" class="form-control" id="name" name="name" placeholder="Masukkan Nama Lengkapmu">

@@ -30,7 +30,7 @@
                 <li class="list-group-item">7 Kursi</li>
                 <li class="list-group-item">1500 CC</li>
                 <li class="list-group-item">Manual</li>
-                <li class="list-group-item"><a href="" class="btn btn-primary">Book Now</a></li>
+                <li class="list-group-item"><a href="Shauman_booking.php?" class="btn btn-primary">Book Now</a></li>
               </ul>
             </div>
           </div>
