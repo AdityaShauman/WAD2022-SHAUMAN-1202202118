@@ -3,10 +3,10 @@
     $id = $_GET["id"];
 
     function removing($id) {
-        global $conn;
+        global $connect;
         $query = "DELETE FROM modul3 WHERE id_mobil=$id";
-        mysqli_query($conn, $query);
-        return mysqli_affected_rows($conn);
+        mysqli_query($connect, $query);
+        return mysqli_affected_rows($connect);
     }
 
     if ( removing($id) > 0 ) {
