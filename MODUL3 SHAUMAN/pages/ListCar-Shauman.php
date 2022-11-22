@@ -1,7 +1,7 @@
 <?php 
   require('../config/connector.php');
   $title = "MyCar";
-  $mobil = query("SELECT * FROM modul3");
+  $mobil = querydata("SELECT * FROM modul3");
 ?>
 
 <!DOCTYPE html>
@@ -17,8 +17,25 @@
 </head>
 <body>
 
-<?php include "Navbar.php" ?>
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg bg-primary navbar-dark">
+    <div class="container-fluid container">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active <?php if ($title == "Home") echo "active" ?>" aria-current="page" href="./Home-Shauman.php">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link <?php if ($title == "MyCar") echo "active" ?>" href="./ListCar-Shauman.php">MyCar</a>
+          </li>
+        </ul>
+        <a class="btn btn-light" href="./Add-Shauman.php">Add Car</a>
+      </div>
+    </div>
+  </nav>
+  <!-- end of navbar -->
 
+    <br><br><br>
     <div class="container text-left">
         <h3>My Show Room</h3>
         <p style="opacity:80%;">List Show Room Shauman - 1202202118</p>
@@ -30,7 +47,7 @@
         <?php foreach( $mobil as $mobi ) : ?>
             <div class="col">
                 <div class="card" style="width: 18rem;">
-                    <img src="../assets/images/<?= $mobi['foto_mobil'] ?>" class="card-img-top" alt="...">
+                    <img src="../asset/images/<?= $mobi['foto_mobil'] ?>" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title"><?= $mobi["nama_mobil"] ?></h5>
                         <p class="card-text"><?= substr($mobi['deskripsi'], 0, 100) . ' ...' ?></p>

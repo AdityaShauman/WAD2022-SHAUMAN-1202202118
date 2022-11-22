@@ -2,9 +2,9 @@
   require "../config/edit.php";
 
     $id = $_GET["id"];
-    $mobil = query("SELECT * FROM modul3 WHERE id_mobil=$id")[0];
+    $mobil = querydata("SELECT * FROM modul3 WHERE id_mobil=$id")[0];
 
-    if ( isset($_POST["simpan"]) ) {
+    if ( isset($_POST["save"]) ) {
         if ( editing($_POST) > 0 ) {
             echo "
                 <script>
@@ -45,42 +45,43 @@
       </div>
       <div class="row">
         <div class="col">
-        <br><br><br><br><img src="../assets/images/<?= $mobil["foto_mobil"] ?>" alt="">
+        <br><br><br><br><img src="../asset/images/<?= $mobil["foto_mobil"] ?>" alt="">
         </div>
 
         <div class="col">
-        <form style="padding : 100px 10%">
+        <form style="padding : 100px 10%" method="post" action="" enctype="multipart/form-data">
         <h3>Tambah Mobil</h3>
         <p style="opacity:80%;">Tambah Mobil Baru Anda Ke List Show Room</p>
 
+        <input type="hidden" name="id_mobil" value="<?=$mobil['id_mobil'] ?>">
         <div class="mb-3">
             <label for="name" class="form-label">Nama Mobil</label>
-            <input type="text" class="form-control" id="car" name="car" placeholder="<?=$mobil['nama_mobil'] ?>">
+            <input type="text" class="form-control" id="car" name="car" value="<?=$mobil['nama_mobil'] ?>">
         </div>
 
         <div class="mb-3">
             <label for="owner" class="form-label">Nama Pemilik</label>
-            <input type="text" class="form-control" id="owner" name="owner" placeholder="<?=$mobil['pemilik_mobil'] ?>">
+            <input type="text" class="form-control" id="owner" name="owner" value="<?=$mobil['pemilik_mobil'] ?>">
         </div>
 
         <div class="mb-3">
             <label for="merk" class="form-label">Merk</label>
-            <input type="text" class="form-control" id="merk" name="merk" placeholder="<?=$mobil['merk_mobil'] ?>">
+            <input type="text" class="form-control" id="merk" name="merk" value="<?=$mobil['merk_mobil'] ?>">
         </div>
 
         <div class="mb-3">
             <label for="date" class="form-label">Tanggal Beli</label>
-            <input type="date" class="form-control" id="date" name="date" placeholder="<?=$mobil['tanggal_beli'] ?>">
+            <input type="date" class="form-control" id="date" name="date" value="<?=$mobil['tanggal_beli'] ?>">
         </div>
 
         <div class="form-group">
             <label for="description">Deskripsi</label>
-            <textarea class="form-control" id="description" rows="3" placeholder="<?=$car['deskripsi'] ?>"></textarea>
+            <textarea name="deskripsi" class="form-control" id="description" rows="3" ><?= $mobil['deskripsi'] ?></textarea>
         </div>
         <br>
         <div class="form-group">
             <label for="image">Foto</label><br>
-            <input type="file" class="form-control-file" id="image" accept="image/*">
+            <input type="file" class="form-control-file" id="image" name="fotofile">
         </div>
         <br>
         <label for="statusbayar">Status Pembayaran</label><br>
@@ -95,7 +96,7 @@
 
         <div class="mb-3">
             <div>
-                <br><button class="btn btn-primary" type="submit">Selesai</button>
+                <br><button class="btn btn-primary" type="submit" name="save">Selesai</button>
             </div>
         </div>
     </form>

@@ -3,7 +3,8 @@
   $title = "MyCar";
   $id = $_GET["id"];
 
-  $mobil = query("SELECT * FROM modul3 WHERE id_modul='$id'");
+  $mobil = querydata("SELECT * FROM modul3 WHERE id_mobil='$id'");
+  var_dump($mobil);
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +30,7 @@
 
   <div class="row">
     <div class="col">
-    <br><br><br><br>            <img src="../assets/images/<?= $mobil[0]['foto_mobil'] ?>" alt="">
+    <br><br><br><br>            <img src="../asset/images/<?= $mobil[0]['foto_mobil'] ?>" alt="">
     </div>
 
     <div class="col">
@@ -79,7 +80,7 @@
 
     <div class="mb-3">
         <div>
-            <br><button class="btn btn-primary" href="./Edit-Shauman.php?id=<?= $mobil[0]['id_mobil'] ?>">Edit</button>
+            <br><a href="./Edit-Shauman.php?id=<?= $mobil[0]['id_mobil'] ?>" class="btn btn-primary ">Edit</a>
         </div>
     </div>
 </form>

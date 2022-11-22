@@ -1,6 +1,6 @@
 <?php 
     require "../config/insert.php";
-    if ( isset($_POST["Finished"]) ) {
+    if ( isset($_POST["submitselesai"]) ) {
         if ( adding($_POST) > 0 ) {
             echo "
                 <script>
@@ -34,7 +34,7 @@
 
 <?php include "Navbar.php" ?>
 
-    <form style="padding : 100px 10%" action="" method ="POST" enctype="multipart/form-data>
+    <form style="padding : 100px 10%" action="" method ="POST" enctype="multipart/form-data">
         <h3>Tambah Mobil</h3>
         <p style="opacity:80%;">Tambah Mobil Baru Anda Ke List Show Room</p>
 
@@ -65,7 +65,7 @@
         <br>
         <div class="form-group">
             <label for="image">Foto</label><br>
-            <input type="file" class="form-control-file" id="image" name = "fotomobil" accept="image/*">
+            <input type="file" class="form-control-file" id="image" name = "fotomobil">
         </div>
         <br>
         <label for="statusbayar">Status Pembayaran</label><br>
