@@ -1,10 +1,9 @@
 <?php 
-  require('../config/connector.php');
+  require '../config/connector.php';
   $title = "MyCar";
   $id = $_GET["id"];
 
   $mobil = querydata("SELECT * FROM modul3 WHERE id_mobil='$id'");
-  var_dump($mobil);
 ?>
 
 <!DOCTYPE html>
