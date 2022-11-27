@@ -4,7 +4,7 @@
 
     function removing($id) {
         global $connect;
-        $query = "DELETE FROM modul3 WHERE id_mobil=$id";
+        $query = "DELETE FROM showroom_shauman_table WHERE id_mobil=$id";
         mysqli_query($connect, $query);
         return mysqli_affected_rows($connect);
     }

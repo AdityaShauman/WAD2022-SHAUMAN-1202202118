@@ -11,7 +11,7 @@
         $fotomobil = upfoto();
     
         $statusbayar = $inputdata['statusbayar'];
-        $query = "UPDATE modul3 SET 
+        $query = "UPDATE showroom_shauman_table SET 
         id_mobil='',
         nama_mobil='$car', 
         pemilik_mobil='$pemilik', 

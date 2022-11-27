@@ -15,7 +15,7 @@
     
         $statusbayar = $inputdata['statusbayar'];
         
-        $query = "INSERT INTO modul3 VALUES('', '$car','$pemilik','$merk','$tanggal','$deskripsi','$fotomobil','$statusbayar')";
+        $query = "INSERT INTO showroom_shauman_table VALUES('', '$car','$pemilik','$merk','$tanggal','$deskripsi','$fotomobil','$statusbayar')";
     
         mysqli_query($connect,$query);
 

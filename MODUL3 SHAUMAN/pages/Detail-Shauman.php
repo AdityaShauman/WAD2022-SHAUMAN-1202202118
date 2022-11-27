@@ -3,7 +3,7 @@
   $title = "MyCar";
   $id = $_GET["id"];
 
-  $mobil = querydata("SELECT * FROM modul3 WHERE id_mobil='$id'");
+  $mobil = querydata("SELECT * FROM showroom_shauman_table WHERE id_mobil='$id'");
 ?>
 
 <!DOCTYPE html>

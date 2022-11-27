@@ -1,7 +1,7 @@
 <?php 
   require('../config/connector.php');
   $title = "MyCar";
-  $mobil = querydata("SELECT * FROM modul3");
+  $mobil = querydata("SELECT * FROM showroom_shauman_table");
 ?>
 
 <!DOCTYPE html>
