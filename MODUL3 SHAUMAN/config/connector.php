@@ -1,6 +1,6 @@
 <?php
 
-$connect = mysqli_connect("localhost".":"."3306", "root", "", "showroom_shauman_table");
+$connect = mysqli_connect("localhost".":"."3306", "root", "", "modul3");
 
     function querydata($query) {
         global $connect;
