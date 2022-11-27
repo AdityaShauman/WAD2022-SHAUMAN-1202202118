@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 22, 2022 at 09:28 AM
+-- Generation Time: Nov 27, 2022 at 05:02 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -18,16 +18,16 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `showroom_shauman_table`
+-- Database: `modul3`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `modul3`
+-- Table structure for table `showroom_shauman_table`
 --
 
-CREATE TABLE `modul3` (
+CREATE TABLE `showroom_shauman_table` (
   `id_mobil` int(255) NOT NULL,
   `nama_mobil` varchar(255) NOT NULL,
   `pemilik_mobil` varchar(255) NOT NULL,
