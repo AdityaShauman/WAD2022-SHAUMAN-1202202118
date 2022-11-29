@@ -8,7 +8,7 @@
 
     require('../config/edit.php');
     $emailuser = $_SESSION["email"];
-    $user = mysqli_query($conn, "SELECT * FROM users WHERE email = '$emailuser'");
+    $user = mysqli_query($connect_user, "SELECT * FROM users WHERE email = '$emailuser'");
     $display = mysqli_fetch_assoc($user);
 
     if (isset($_POST["update"])) {

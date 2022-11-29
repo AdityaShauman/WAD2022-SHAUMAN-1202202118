@@ -3,7 +3,7 @@
     function registrasi ($data){
         global $connect_user;
 
-        $namauser = strtolower(stripslashes($data["username"]));
+        $namauser = strtolower(stripslashes($data["namauser"]));
         $emailuser = strtolower(stripslashes($data["emailuser"]));
         $nomorhp = strtolower(stripslashes($data["nomorhp"]));
         $password = mysqli_real_escape_string($connect_user,$data["Password"]);
