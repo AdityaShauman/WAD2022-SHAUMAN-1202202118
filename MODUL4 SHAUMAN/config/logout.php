@@ -1,13 +1,13 @@
-<?php
+    <?php
 
-    session_start();
-    $_SESSION = []; 
-    session_unset();
+        session_start();
+        $_SESSION = []; 
+        session_unset();
 
-    session_destroy();
-    setcookie("login", "", time() - 3600);
+        session_destroy();
+        setcookie("login", "", time() - 3600);
 
-    header("Location:../pages/Login-Shauman.php");
-    exit;
+        header("Location:../pages/Login-Shauman.php");
+        exit;
 
-?>
+    ?>
